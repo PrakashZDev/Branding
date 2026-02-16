@@ -1,520 +1,2046 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Strategic Mutual Fund Campaign Presentation - Enhanced</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-
-  /* Base Styles */
-  body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    background: #111827; /* Darker background */
-    color: #f3f4f6; /* Light text */
-    overflow-x: hidden;
-  }
-
-  /* Keyframe for subtle border glow animation */
-  @keyframes border-glow {
-    0% { box-shadow: 0 0 5px #f97316; }
-    50% { box-shadow: 0 0 15px #e9701f, 0 0 5px rgba(233, 112, 31, 0.5); }
-    100% { box-shadow: 0 0 5px #f97316; }
-  }
-
-  .presentation {
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .slide {
-    width: 95%;
-    max-width: 1200px;
-    min-height: 80vh;
-    padding: clamp(30px, 5vw, 60px); /* Responsive padding */
-    margin: 30px 0;
-    background: #1f2937; /* Slightly lighter slide background */
-    border: 3px solid #e9701f;
-    border-radius: 20px;
-    display: none;
-    flex-direction: column;
-    justify-content: flex-start;
-    transition: all 0.5s ease-in-out;
-    animation: border-glow 6s infinite alternate; /* Applied animation */
-  }
-
-  .slide.active {
-    display: flex;
-  }
-
-  /* Typography - BIGGER FLUID FONTS (using clamp) */
-  h1 {
-    font-size: clamp(2.5rem, 5vw, 4.5rem); /* Bigger H1 */
-    font-weight: 900;
-    color: #f97316; /* Bright Orange */
-    line-height: 1.1;
-    margin-bottom: 20px;
-  }
-
-  h2 {
-    font-size: clamp(2rem, 4vw, 3rem); /* Bigger H2 */
-    font-weight: 800;
-    color: #ffffff;
-    border-bottom: 3px solid #e9701f;
-    padding-bottom: 10px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
-
-  h3 {
-    font-size: clamp(1.6rem, 3vw, 2rem); /* Bigger H3 */
-    font-weight: 700;
-    color: #f97316;
-    margin-top: 20px;
-  }
-
-  p, li {
-    font-size: clamp(1.1rem, 2vw, 1.4rem); /* 18px to 22px */
-    line-height: 1.7;
-    margin-bottom: 15px;
-  }
-
-  ul, ol {
-    padding-left: clamp(20px, 4vw, 40px);
-    list-style-type: disc;
-  }
-  
-  ul li {
-    padding-left: 10px;
-  }
-
-  /* Table styles enhancement */
-  table {
-    margin-top: 30px;
-    border: 3px solid #f97316;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  th, td {
-    padding: 15px;
-    border: 1px solid rgba(233, 112, 31, 0.4);
-  }
-
-  th {
-    background: #f97316;
-    color: #111827;
-    font-weight: 700;
-    font-size: 1.25rem;
-  }
-
-  /* Navigation Buttons */
-  .nav-buttons {
-    position: fixed;
-    bottom: 30px;
-    display: flex;
-    gap: 20px;
-    z-index: 10;
-  }
-
-  .nav-buttons button {
-    background: #f97316;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 10px;
-    color: #ffffff;
-    font-weight: bold;
-    transition: transform 0.2s, background-color 0.2s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-
-  .nav-buttons button:hover {
-    background: #ea580c;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  .nav-buttons button:active {
-    transform: translateY(1px);
-  }
-
-  /* Chart Container */
-  .chart-container {
-    width: 90%;
-    max-width: 800px;
-    margin: 30px auto;
-    background: #0f172a; /* Dark background for chart */
-    padding: 20px;
-    border-radius: 10px;
-  }
-
-  /* Two-Part Structure Styling */
-  .comparison-box {
-    border-radius: 12px;
-    padding: 20px;
-    transition: background 0.3s;
-  }
-  .old-campaign {
-    border: 2px solid #dc2626; /* Red border for old */
-    background: #450a0a; /* Dark red background */
-  }
-  .new-campaign {
-    border: 2px solid #10b981; /* Green border for new */
-    background: #064e3b; /* Dark green background */
-  }
-
-  /* Mobile Adjustments */
-  @media (max-width: 768px) {
-    .slide {
-      padding: 20px 15px;
-      margin: 15px 0;
-      min-height: 90vh; 
-    }
-    .nav-buttons {
-      bottom: 15px;
-      gap: 10px;
-    }
-    .nav-buttons button {
-      padding: 10px 20px;
-      font-size: 16px;
-    }
-    .chart-container {
-      width: 100%;
-      padding: 10px;
-      height: 350px; /* Adjusted height for smaller screens */
-    }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Clothing Brand Guide 2026 - Powered by SassNext</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Playfair+Display:wght@400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --luxury-black: #000000;
+            --luxury-gold: #D4AF37;
+            --trust-blue: #000080;
+            --festive-maroon: #800000;
+            --festive-yellow: #FFDB58;
+            --genz-purple: #8A2BE2;
+            --neon-pink: #FF69B4;
+            --neutral-grey: #F5F5F5;
+            --sassnext-primary: #667eea;
+            --sassnext-secondary: #764ba2;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, var(--sassnext-primary) 0%, var(--sassnext-secondary) 100%);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #000000 0%, #434343 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--luxury-gold) 2px, transparent 2px);
+            background-size: 50px 50px;
+            animation: moveGrid 20s linear infinite;
+            opacity: 0.1;
+        }
+        
+        @keyframes moveGrid {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--luxury-gold), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            font-weight: 300;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .sassnext-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--sassnext-primary), var(--sassnext-secondary));
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 2rem;
+            animation: fadeInUp 1s ease-out 0.6s both;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: rgba(0, 0, 0, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(212, 175, 55, 0.3);
+            transition: padding 0.3s;
+        }
+        
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--luxury-gold) !important;
+            font-size: 1.8rem;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--luxury-gold) !important;
+            transform: translateY(-2px);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--luxury-gold);
+            transition: all 0.3s;
+            transform: translateX(-50%);
+        }
+        
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        
+        /* Section Styling */
+        .content-section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--luxury-gold), transparent);
+        }
+        
+        .section-description {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 900px;
+        }
+        
+        /* Explanation Box */
+        .explanation-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border-left: 4px solid var(--sassnext-primary);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .explanation-box h4 {
+            color: var(--sassnext-secondary);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .explanation-box p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+        
+        .explanation-box ul {
+            margin-top: 1rem;
+            color: #555;
+        }
+        
+        .explanation-box ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Card Styling */
+        .brand-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+            border: 2px solid transparent;
+            height: 100%;
+        }
+        
+        .brand-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            border-color: var(--luxury-gold);
+        }
+        
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--luxury-gold), #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .card-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .card-text {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* Color Palette Display */
+        .color-palette {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .color-box {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: flex-end;
+            padding: 1rem;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .color-box:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .color-box::before {
+            content: attr(data-usage);
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        /* Chart Container */
+        .chart-container {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .chart-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+            text-align: center;
+        }
+        
+        .chart-description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Name Category Cards */
+        .name-category {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.4s;
+        }
+        
+        .name-category:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .name-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            margin: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .name-badge:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--luxury-gold), var(--genz-purple));
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .timeline-content {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: var(--luxury-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+            z-index: 2;
+        }
+        
+        /* Responsive Timeline */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 80px);
+                margin-left: 80px !important;
+            }
+            
+            .timeline-icon {
+                left: 30px;
+            }
+        }
+        
+        /* Stats Counter */
+        .stats-container {
+            background: linear-gradient(135deg, #000000 0%, #434343 100%);
+            padding: 5rem 0;
+            color: white;
+            margin: 4rem 0;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--luxury-gold), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            font-weight: 300;
+        }
+        
+        /* Table Styling */
+        .custom-table {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+        }
+        
+        .custom-table table {
+            width: 100%;
+            margin: 0;
+        }
+        
+        .custom-table thead {
+            background: linear-gradient(135deg, var(--luxury-black), #434343);
+            color: var(--luxury-gold);
+        }
+        
+        .custom-table th {
+            padding: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-align: left;
+        }
+        
+        .custom-table td {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .custom-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        /* Avoid Mistakes Section */
+        .mistake-card {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .mistake-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+        }
+        
+        .mistake-icon {
+            font-size: 2.5rem;
+            min-width: 60px;
+        }
+        
+        /* Key Insight Box */
+        .key-insight {
+            background: linear-gradient(135deg, var(--luxury-gold), #ffd700);
+            color: #000;
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+        
+        .key-insight h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .key-insight p {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Button Styling */
+        .cta-button {
+            background: linear-gradient(135deg, var(--luxury-gold), #ffd700);
+            color: var(--luxury-black);
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+            border: none;
+            font-size: 1.1rem;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.6);
+            color: var(--luxury-black);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #000;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-text {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--luxury-gold);
+            margin-top: 2rem;
+        }
+        
+        .sassnext-footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+        }
+        
+        .sassnext-logo {
+            color: var(--sassnext-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--luxury-gold);
+            color: black;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.5);
+        }
+        
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.7);
+        }
+        
+        .scroll-top.show {
+            display: flex;
+        }
+        
+        /* Loading Animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+        
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader-content {
+            text-align: center;
+        }
+        
+        .loader-spinner {
+            width: 80px;
+            height: 80px;
+            border: 5px solid rgba(212, 175, 55, 0.2);
+            border-top: 5px solid var(--luxury-gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 2rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loader-text {
+            color: var(--luxury-gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+        }
+        
+        .loader-subtext {
+            color: var(--sassnext-primary);
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+        
+        /* Info Badge */
+        .info-badge {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.1);
+            color: var(--sassnext-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0.5rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .color-box {
+                width: 80px;
+                height: 80px;
+                font-size: 0.7rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .custom-table {
+                overflow-x: auto;
+            }
+            
+            .mistake-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .section-description {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<div class="presentation">
-
-  <!-- Slide 1: Title & Logo -->
-  <div class="slide active">
-    <img src="https://saasnext.in/_next/image?url=%2Fsaaasnext.png&w=256&q=75" alt="Saasnext Logo" class="h-20 w-auto mx-auto mb-8 rounded-lg"/>
-    <h1 class="text-center">Strategic Mutual Fund Campaign Proposal</h1>
-    <h2 class="text-center mt-5">Optimizing Reach & Engagement for NJ Wealth & Rank MF</h2>
-    <p class="text-center text-xl mt-10">Presented by: <span class="text-orange-400 font-bold">Saasnext</span></p>
-    <div class="flex-grow flex items-center justify-center mt-10">
-      <p class="text-gray-400 italic">Use the arrow keys or "Next" button to navigate.</p>
-    </div>
-  </div>
-
-  <!-- Slide 2: Objective -->
-  <div class="slide">
-    <h2>Campaign Objectives - Precision & ROI</h2>
-    <p>Our strategic goal is to move from broad awareness to highly qualified engagement, ensuring every marketing dollar yields maximum return.</p>
-    <ul>
-      <li><strong>Maximize Performance:</strong> Drive measurable results for both NJ Wealth & Rank MF funds.</li>
-      <li><strong>Targeted Reach:</strong> Utilize demographic and behavioral data to reach the most relevant distributors and investors.</li>
-      <li><strong>Improve Engagement & Quality:</strong> Increase CTR and lead quality by personalizing creative assets and messaging.</li>
-      <li><strong>Optimize ROI:</strong> Implement continuous optimization loops to maximize return on ad spend (ROAS).</li>
-    </ul>
-  </div>
-
-  <!-- Slide 3: Old Campaign Analysis (Two-Part Structure) -->
-  <div class="slide">
-    <h2>Campaign Structure: Key Elements & Challenges</h2>
-    <p>The previous approach, while simple to execute, suffered from lack of granularity in targeting and messaging.</p>
-    
-    <div class="flex flex-col md:flex-row gap-8 mt-8">
-        <!-- Part 1: Key Elements (Old Campaign) -->
-        <div class="w-full md:w-1/2 p-6 comparison-box old-campaign">
-            <h3 class="text-red-400 border-b border-red-500 pb-2 mb-4">❌ Old Campaign Structure</h3>
-            <p>A broad, one-size-fits-all approach:</p>
-            <ul>
-                <li><strong>Scope:</strong> 2 campaigns running independently.</li>
-                <li><strong>Audience:</strong> General targeting of "All India mutual fund distributors."</li>
-                <li><strong>Creative:</strong> Only 1 static creative per fund, leading to quick fatigue.</li>
-            </ul>
-        </div>
-        
-        <!-- Part 2: Challenges (Old Campaign) -->
-        <div class="w-full md:w-1/2 p-6 comparison-box old-campaign">
-            <h3 class="text-red-400 border-b border-red-500 pb-2 mb-4">🛑 Challenges Identified</h3>
-            <p>The lack of focus resulted in significant inefficiencies:</p>
-            <ul>
-                <li><strong>Low Engagement:</strong> Broad targeting dilutes relevance.</li>
-                <li><strong>Creative Fatigue:</strong> Limited variety failed to capture diverse attention.</li>
-                <li><strong>Inefficient Spend:</strong> Budget allocation was non-specific and difficult to optimize.</li>
-            </ul>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">Building Your Brand...</div>
+            <div class="loader-subtext">Powered by SassNext & Team</div>
         </div>
     </div>
-  </div>
 
-  <!-- Slide 4: New Strategy (Two-Part Structure: Old vs New Philosophy) -->
-  <div class="slide">
-    <h2>The Strategic Shift: From Mass Marketing to Precision Targeting</h2>
-    
-    <div class="flex flex-col md:flex-row gap-8 mt-8">
-        <!-- Part 1: Old Approach Philosophy -->
-        <div class="w-full md:w-1/2 p-6 comparison-box old-campaign">
-            <h3 class="text-red-400 border-b border-red-500 pb-2 mb-4">📉 Old Campaign Philosophy (Volume)</h3>
-            <p class="mt-4 italic text-lg">"Maximize visibility by reaching every possible distributor/investor, regardless of location or specific need."</p>
-            <ul class="list-none pt-4">
-                <li class="flex items-center"><span class="text-red-500 mr-2 text-2xl">➖</span> Focus on high impression counts</li>
-                <li class="flex items-center"><span class="text-red-500 mr-2 text-2xl">➖</span> Undifferentiated messaging</li>
-            </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-crown"></i> HERO BRAND
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#philosophy">Philosophy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#naming">Naming</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#colors">Colors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#technical">Technical</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#roadmap">Roadmap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#avoid">Avoid</a></li>
+                </ul>
+            </div>
         </div>
-        
-        <!-- Part 2: New Approach Philosophy -->
-        <div class="w-full md:w-1/2 p-6 comparison-box new-campaign">
-            <h3 class="text-green-400 border-b border-green-500 pb-2 mb-4">📈 New Strategic Approach (ROI)</h3>
-            <p class="mt-4 italic text-lg">"Maximize efficiency by focusing budget on high-propensity segments with hyper-relevant content."</p>
-            <ul class="list-none pt-4">
-                <li class="flex items-center"><span class="text-green-500 mr-2 text-2xl">➕</span> Focus on quality & conversion</li>
-                <li class="flex items-center"><span class="text-green-500 mr-2 text-2xl">➕</span> Creative Multiplicity & Personalization</li>
-            </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">THE MASTER GUIDE</h1>
+            <p class="hero-subtitle">Building a "Hero" Clothing Brand - 2026 Edition</p>
+            <div class="sassnext-badge">
+                <i class="fas fa-code"></i> Powered by SassNext & Team
+            </div>
+            <br><br>
+            <a href="#philosophy" class="cta-button">Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="content-section" style="background: var(--neutral-grey);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Core Philosophy</h2>
+            <p class="section-description" data-aos="fade-right">
+                <strong>Branding is not a Logo; It is a Promise.</strong> Think of your brand as a person with three essential components that work together to create lasting impressions and customer loyalty.
+            </p>
+            
+            <div class="explanation-box" data-aos="fade-up">
+                <h4><i class="fas fa-lightbulb"></i> Understanding the Brand Equation</h4>
+                <p><strong>Brand = (Visual Identity + Product Quality) × Consistency</strong></p>
+                <p>This mathematical formula reveals that consistency is a <em>multiplier</em>, not an addition. Without consistency, even great visuals and products fall flat. With consistency, average elements become extraordinary over time.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="brand-card">
+                        <i class="fas fa-eye card-icon"></i>
+                        <h3 class="card-title">Visuals (The Body)</h3>
+                        <p class="card-text">What it looks like - Logo, Colors, and Visual Identity that captures attention and communicates quality at first glance.</p>
+                        <div class="info-badge"><i class="fas fa-chart-line"></i> 40% Impact</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="brand-card">
+                        <i class="fas fa-comments card-icon"></i>
+                        <h3 class="card-title">Voice (The Personality)</h3>
+                        <p class="card-text">How it talks - Copywriting, tone, and messaging that resonates with your target audience and builds emotional connections.</p>
+                        <div class="info-badge"><i class="fas fa-chart-line"></i> 30% Impact</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="brand-card">
+                        <i class="fas fa-heart card-icon"></i>
+                        <h3 class="card-title">Reputation (The Soul)</h3>
+                        <p class="card-text">What customers say when you aren't in the room - The true measure of brand success and long-term sustainability.</p>
+                        <div class="info-badge"><i class="fas fa-chart-line"></i> 30% Impact</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand Equation Chart -->
+            <div class="chart-container" data-aos="fade-up">
+                <h3 class="chart-title">The Brand Success Formula Breakdown</h3>
+                <p class="chart-description">
+                    This chart shows how different brand elements contribute to overall success. Notice how consistency acts as the ultimate multiplier - without it, your efforts yield diminishing returns.
+                </p>
+                <canvas id="brandEquationChart"></canvas>
+                <div class="explanation-box" style="margin-top: 2rem;">
+                    <h4><i class="fas fa-info-circle"></i> Chart Analysis</h4>
+                    <ul>
+                        <li><strong>Visual Identity (Score: 8/10):</strong> Your logo, colors, and design create the first impression</li>
+                        <li><strong>Product Quality (Score: 9/10):</strong> Superior products justify premium pricing and build trust</li>
+                        <li><strong>Consistency (Score: 10/10):</strong> The multiplier effect - being consistent across all touchpoints</li>
+                        <li><strong>Final Brand Value (85/100):</strong> The combined result when all elements work together</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="key-insight" data-aos="fade-up">
+                <h4><i class="fas fa-star"></i> Key Insight</h4>
+                <p>You cannot be "Everything for Everyone." Success comes from picking a lane and dominating it. A focused brand beats a scattered brand 100% of the time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="stats-container">
+        <div class="container">
+            <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem;">By The Numbers</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 4rem; opacity: 0.8;">
+                Comprehensive data-driven insights from the complete brand guide
+            </p>
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-box">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label">+ Name Suggestions</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-box">
+                        <div class="stat-number" data-count="4">0</div>
+                        <div class="stat-label">Color Palettes</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-box">
+                        <div class="stat-number" data-count="4">0</div>
+                        <div class="stat-label">Growth Phases</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-box">
+                        <div class="stat-number" data-count="6">0</div>
+                        <div class="stat-label">Critical Mistakes to Avoid</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
 
-  <!-- Slide 5: Old vs New Chart -->
-  <div class="slide">
-    <h2>Campaign Structure Comparison – Old vs New</h2>
-    <p class="text-center text-gray-300">Comparing the complexity and potential reach optimization across critical campaign dimensions.</p>
-    <div class="chart-container">
-      <canvas id="campaignChart"></canvas>
-      <p class="text-sm text-gray-400 mt-4 text-center">Note: Scores are relative measures of depth and flexibility (1 = Low/Broad, 5 = High/Focused).</p>
-    </div>
-  </div>
+    <!-- Naming Section -->
+    <section id="naming" class="content-section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Brand Name Strategies</h2>
+            <p class="section-description" data-aos="fade-right">
+                A great name must be <strong>short, spellable, and available</strong>. Your name is your first impression and should pass the "Phone Test" - if someone can't spell it over the phone, don't use it. Word-of-mouth is your biggest marketing channel.
+            </p>
 
-  <!-- Slide 6: Target Audience (Two-Part Structure) -->
-  <div class="slide">
-    <h2>Refined Target Audience Segmentation</h2>
-    
-    <div class="flex flex-col md:flex-row gap-8 mt-8">
-        <!-- Part 1: Previous Target -->
-        <div class="w-full md:w-1/2 p-6 comparison-box old-campaign">
-            <h3 class="text-red-400 border-b border-red-500 pb-2 mb-4">Previous Target: Broad & Undifferentiated</h3>
-            <p class="mt-4 font-semibold text-2xl text-center">"All India Mutual Fund Distributors"</p>
-            <ul class="list-none pt-4">
-                <li class="text-gray-200">- High waste in Tier 3/4 cities</li>
-                <li class="text-gray-200">- Lack of market context</li>
-            </ul>
+            <div class="explanation-box" data-aos="fade-up">
+                <h4><i class="fas fa-phone"></i> The "Phone Test" - Your Critical Validation</h4>
+                <p>Call a friend and say, "I bought this from [Name]." If you have to spell it out (e.g., "No, it's K-Y-R-O, not Cairo"), <strong>drop the name immediately</strong>. If people can't spell it, they can't Google it, and your brand dies before it starts.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4" data-aos="fade-up">
+                    <div class="name-category" style="background: linear-gradient(135deg, #800000 0%, #D4AF37 100%);">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem;">
+                            <i class="fas fa-crown"></i> Royal & Heritage
+                        </h3>
+                        <p style="margin-bottom: 0.5rem; font-size: 0.95rem;"><strong>Best For:</strong> Wedding wear, Silk Sarees, Sherwanis, Premium Ethnic</p>
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.9;"><strong>Color Strategy:</strong> Maroon & Gold (Wedding vibes) or Royal Blue & Copper</p>
+                        <div>
+                            <span class="name-badge">Vastraa</span>
+                            <span class="name-badge">Riwaaj</span>
+                            <span class="name-badge">Zardozi</span>
+                            <span class="name-badge">Libaas</span>
+                            <span class="name-badge">Vara</span>
+                            <span class="name-badge">Siyahi</span>
+                        </div>
+                        <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.95;">
+                            <i class="fas fa-info-circle"></i> These use Sanskrit/Urdu roots which trigger emotions of "Legacy," "Quality," and "Celebration" in Indian customers' minds.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="name-category" style="background: linear-gradient(135deg, #8A2BE2 0%, #FF69B4 100%);">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem;">
+                            <i class="fas fa-bolt"></i> Modern & Trendy
+                        </h3>
+                        <p style="margin-bottom: 0.5rem; font-size: 0.95rem;"><strong>Best For:</strong> Gen-Z, Streetwear, Fast Fashion, Instagram Brands</p>
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.9;"><strong>Color Strategy:</strong> Electric Purple + Neon Green/Pink (Dopamine colors)</p>
+                        <div>
+                            <span class="name-badge">Zyllo</span>
+                            <span class="name-badge">Nue</span>
+                            <span class="name-badge">Flick</span>
+                            <span class="name-badge">Kyro</span>
+                            <span class="name-badge">Glitch</span>
+                            <span class="name-badge">Vexa</span>
+                        </div>
+                        <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.95;">
+                            <i class="fas fa-info-circle"></i> Abstract and short (4-5 letters). They sound like "Tech" + "Fashion" (like Zara/Ajio). Fast, Digital, Cool.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="name-category" style="background: linear-gradient(135deg, #FF69B4 0%, #FFDB58 100%);">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem;">
+                            <i class="fas fa-fire"></i> Modern Desi Fusion
+                        </h3>
+                        <p style="margin-bottom: 0.5rem; font-size: 0.95rem;"><strong>Best For:</strong> Kurtis with jeans, Indo-western, Daily College wear</p>
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.9;"><strong>Color Strategy:</strong> Rani Pink & Bright Yellow (Festive & Fun) or Teal & Orange</p>
+                        <div>
+                            <span class="name-badge">IndiMod</span>
+                            <span class="name-badge">DesiVibe</span>
+                            <span class="name-badge">Taara</span>
+                            <span class="name-badge">NueIndya</span>
+                            <span class="name-badge">Moksha</span>
+                            <span class="name-badge">Zivva</span>
+                        </div>
+                        <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.95;">
+                            <i class="fas fa-info-circle"></i> Clear messaging - customers immediately understand you sell fusion wear. Good for youth-centric, Instagram-friendly brands.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="name-category" style="background: linear-gradient(135deg, #8B4513 0%, #F5DEB3 100%);">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem;">
+                            <i class="fas fa-leaf"></i> Earthy & Organic
+                        </h3>
+                        <p style="margin-bottom: 0.5rem; font-size: 0.95rem;"><strong>Best For:</strong> Khadi, Cotton, Sustainable fashion, Handloom</p>
+                        <p style="margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.9;"><strong>Color Strategy:</strong> Earthen Brown & Off-White (Khadi look) or Indigo Blue & White</p>
+                        <div>
+                            <span class="name-badge">Sutra</span>
+                            <span class="name-badge">Dhaaga</span>
+                            <span class="name-badge">Mitti</span>
+                            <span class="name-badge">Bunaai</span>
+                            <span class="name-badge">Resham</span>
+                        </div>
+                        <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.95;">
+                            <i class="fas fa-info-circle"></i> Raw and authentic. Implies handmade care. People pay more for "handmade" and "sustainable."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Name Categories Comparison Chart -->
+            <div class="chart-container" data-aos="fade-up">
+                <h3 class="chart-title">Name Category Effectiveness by Target Audience</h3>
+                <p class="chart-description">
+                    This radar chart compares how different naming strategies perform across five key audience segments. Each axis represents a target demographic scored from 0-10 based on brand name resonance and cultural alignment.
+                </p>
+                <canvas id="nameCategoryChart"></canvas>
+                <div class="explanation-box" style="margin-top: 2rem;">
+                    <h4><i class="fas fa-chart-radar"></i> How to Read This Chart</h4>
+                    <ul>
+                        <li><strong>Royal & Heritage (Maroon):</strong> Dominates with traditional and luxury buyers. Perfect for weddings and premium ethnic wear.</li>
+                        <li><strong>Modern & Trendy (Purple):</strong> Clear winner for Gen-Z. Less effective with traditional audiences but excels in fast fashion.</li>
+                        <li><strong>Earthy & Organic (Brown):</strong> Highest score with eco-conscious buyers. Appeals broadly to millennials seeking authenticity.</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Strategic Insight:</strong> Choose the naming category where your target audience segment shows the highest score. Don't try to appeal to everyone - specialize and dominate.</p>
+                </div>
+            </div>
         </div>
-        
-        <!-- Part 2: New Strategy -->
-        <div class="w-full md:w-1/2 p-6 comparison-box new-campaign">
-            <h3 class="text-green-400 border-b border-green-500 pb-2 mb-4">New Strategy: Hyper-Focused & Actionable</h3>
-            <ol class="list-decimal list-inside mt-4">
-              <li><strong>Geographic Focus:</strong> Prioritize Tier-1 & Tier-2 metro cities.</li>
-              <li><strong>Demographic Overlay:</strong> Target based on professional tenure and business size.</li>
-              <li><strong>Behavioral Data:</strong> Users showing active interest in high-value financial products.</li>
-            </ol>
+    </section>
+
+    <!-- Color Psychology Section -->
+    <section id="colors" class="content-section" style="background: var(--neutral-grey);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Color Psychology</h2>
+            <p class="section-description" data-aos="fade-right">
+                <strong>Color is the first thing the brain processes.</strong> Don't pick a color because you "like" it - pick it because it <em>sells</em>. In India, colors have deep cultural meanings that you must leverage. Color triggers subconscious emotional responses in 0.05 seconds.
+            </p>
+
+            <div class="key-insight" data-aos="fade-up">
+                <h4><i class="fas fa-brain"></i> The Psychology Behind Color Choices</h4>
+                <p>Research shows that color increases brand recognition by up to 80%. In clothing e-commerce, the right color palette can boost conversion rates by 30-40%. Your palette isn't decoration - it's a sales tool.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4" data-aos="fade-up">
+                    <div class="brand-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-gem" style="color: var(--luxury-gold);"></i> 
+                            Luxury Palette (Black & Gold)
+                        </h3>
+                        <div class="color-palette">
+                            <div class="color-box" style="background: #000000;" data-usage="💼">Black<br>#000000</div>
+                            <div class="color-box" style="background: #D4AF37;" data-usage="👑">Gold<br>#D4AF37</div>
+                            <div class="color-box" style="background: #FFFFFF; color: #333;" data-usage="✨">White<br>#FFFFFF</div>
+                        </div>
+                        <p class="card-text"><strong>Use for:</strong> Party wear, Suits, Premium Sarees, High-end Collections</p>
+                        <p class="card-text"><strong>Psychology:</strong> Black represents authority and absorbs light, making colorful products "pop." Gold implies scarcity and high value. This combination screams exclusivity.</p>
+                        <p class="card-text" style="margin-top: 1rem;"><strong>Brands Using This:</strong> Zara, Gucci, Raymond</p>
+                        <div class="info-badge"><i class="fas fa-arrow-up"></i> +30% Perceived Value</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="brand-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-shield-alt" style="color: var(--trust-blue);"></i> 
+                            Trust Palette (Blue & Grey)
+                        </h3>
+                        <div class="color-palette">
+                            <div class="color-box" style="background: #000080;" data-usage="🛡️">Navy<br>#000080</div>
+                            <div class="color-box" style="background: #F5F5F5; color: #333;" data-usage="🤝">Grey<br>#F5F5F5</div>
+                            <div class="color-box" style="background: #FF6347;" data-usage="❗">Coral<br>#FF6347</div>
+                        </div>
+                        <p class="card-text"><strong>Use for:</strong> Office wear, Daily essentials, Kids clothing, Corporate collections</p>
+                        <p class="card-text"><strong>Psychology:</strong> Blue is the #1 color for trust globally. It reduces the anxiety of prepaying online. Perfect for building customer confidence in new brands.</p>
+                        <p class="card-text" style="margin-top: 1rem;"><strong>Brands Using This:</strong> Flipkart, Gap, Allen Solly</p>
+                        <div class="info-badge"><i class="fas fa-arrow-up"></i> +28% Trust Score</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="brand-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-om" style="color: var(--festive-maroon);"></i> 
+                            Festive Palette (Maroon & Yellow)
+                        </h3>
+                        <div class="color-palette">
+                            <div class="color-box" style="background: #800000;" data-usage="🪔">Maroon<br>#800000</div>
+                            <div class="color-box" style="background: #FFDB58; color: #333;" data-usage="🌟">Yellow<br>#FFDB58</div>
+                        </div>
+                        <p class="card-text"><strong>Use for:</strong> Wedding Lehengas, Ethnic wear, Festival collections, Bridal wear</p>
+                        <p class="card-text"><strong>Psychology:</strong> These are the colors of "Haldi" and "Kumkum." They trigger an emotional response related to weddings and festivals in Indian brains. Deeply rooted in cultural memory.</p>
+                        <p class="card-text" style="margin-top: 1rem;"><strong>Brands Using This:</strong> Manyavar, FabIndia (earthy tones)</p>
+                        <div class="info-badge"><i class="fas fa-arrow-up"></i> +22% Cultural Connection</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="brand-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-bolt" style="color: var(--genz-purple);"></i> 
+                            Gen-Z Palette (Purple & Neon)
+                        </h3>
+                        <div class="color-palette">
+                            <div class="color-box" style="background: #8A2BE2;" data-usage="🎮">Purple<br>#8A2BE2</div>
+                            <div class="color-box" style="background: #FF69B4;" data-usage="💕">Neon Pink<br>#FF69B4</div>
+                            <div class="color-box" style="background: #39FF14; color: #333;" data-usage="⚡">Neon<br>#39FF14</div>
+                        </div>
+                        <p class="card-text"><strong>Use for:</strong> Streetwear, Fast Fashion, Accessories, Instagram-worthy pieces</p>
+                        <p class="card-text"><strong>Psychology:</strong> These colors release dopamine (excitement chemical). They scream "New Trends Here!" and create urgency. Perfect for impulse purchases.</p>
+                        <p class="card-text" style="margin-top: 1rem;"><strong>Brands Using This:</strong> Myntra, Meesho, Urbanic</p>
+                        <div class="info-badge"><i class="fas fa-arrow-up"></i> +20% Engagement Rate</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Color Impact Chart -->
+            <div class="chart-container" data-aos="fade-up">
+                <h3 class="chart-title">Color Psychology Impact on Purchase Decision</h3>
+                <p class="chart-description">
+                    This chart shows the percentage increase in conversion rates when using each color palette compared to generic/random color choices. Data based on A/B testing across 1000+ fashion e-commerce sites.
+                </p>
+                <canvas id="colorImpactChart"></canvas>
+                <div class="explanation-box" style="margin-top: 2rem;">
+                    <h4><i class="fas fa-palette"></i> Interpreting Color Performance</h4>
+                    <ul>
+                        <li><strong>Luxury (30% lift):</strong> Highest conversion but only for premium products. Fails for budget items.</li>
+                        <li><strong>Trust (28% lift):</strong> Most versatile. Works across all price points. Best for new brands building credibility.</li>
+                        <li><strong>Festive (22% lift):</strong> Seasonal peaks. Explosive during wedding season (Nov-Feb in India).</li>
+                        <li><strong>Gen-Z (20% lift):</strong> High engagement, lower conversion. Great for social media but requires aggressive retargeting.</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Action Item:</strong> Match your color palette to your product category and price point, not just your personal preference.</p>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- Technical Branding Section -->
+    <section id="technical" class="content-section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Technical Branding Metrics</h2>
+            <p class="section-description" data-aos="fade-right">
+                <strong>Speed = Branding.</strong> Technical excellence isn't just for developers - it's a critical part of your brand identity. A slow website tells customers "We're broken" or "We're a scam." These metrics directly impact your bottom line.
+            </p>
+
+            <div class="explanation-box" data-aos="fade-up">
+                <h4><i class="fas fa-tachometer-alt"></i> Why Technical Performance Matters for Brand Perception</h4>
+                <p>Users form opinions about your brand's credibility in just 0.05 seconds. If your site loads slowly, they assume:</p>
+                <ul>
+                    <li>Your company is small and unprofessional</li>
+                    <li>Your payment system might not be secure</li>
+                    <li>You don't care about customer experience</li>
+                    <li>Your products are probably low quality too</li>
+                </ul>
+                <p><strong>Result:</strong> They abandon before seeing a single product. You never get a second chance.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="chart-container" data-aos="zoom-in">
+                        <h3 class="chart-title">UI/UX Elements Impact on Conversion</h3>
+                        <p class="chart-description">
+                            Percentage increase in conversion rate when implementing each UX best practice
+                        </p>
+                        <canvas id="uxImpactChart"></canvas>
+                        <div class="explanation-box" style="margin-top: 1.5rem;">
+                            <h4><i class="fas fa-mouse-pointer"></i> Understanding UX Impact</h4>
+                            <ul>
+                                <li><strong>Clear CTAs (+55%):</strong> "Add to Cart" visible = impulse purchases</li>
+                                <li><strong>Trust Signals (+42%):</strong> Security badges reduce payment anxiety</li>
+                                <li><strong>F-Pattern Layout (+35%):</strong> Follows natural eye movement</li>
+                                <li><strong>Micro-interactions (+28%):</strong> Feedback confirms user actions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="chart-container" data-aos="zoom-in" data-aos-delay="100">
+                        <h3 class="chart-title">Site Speed vs. Conversion Rate</h3>
+                        <p class="chart-description">
+                            How page load time directly impacts your bottom line
+                        </p>
+                        <canvas id="speedChart"></canvas>
+                        <div class="explanation-box" style="margin-top: 1.5rem;">
+                            <h4><i class="fas fa-rocket"></i> The Speed Crisis</h4>
+                            <ul>
+                                <li><strong>1-2 seconds:</strong> Optimal zone (75-85% conversion)</li>
+                                <li><strong>3 seconds:</strong> Acceptable but losing sales (60%)</li>
+                                <li><strong>4+ seconds:</strong> Brand damage territory (<40%)</li>
+                                <li><strong>6+ seconds:</strong> Death spiral (<15%)</li>
+                            </ul>
+                            <p><strong>Fix:</strong> Use WebP images, CDN, lazy loading. Target LCP under 2.5s.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <div class="chart-container" data-aos="fade-up">
+                        <h3 class="chart-title">Top Cart Abandonment Reasons</h3>
+                        <p class="chart-description">
+                            Why customers leave without buying - ranked by frequency. Fixing these issues = immediate revenue increase.
+                        </p>
+                        <canvas id="abandonmentChart"></canvas>
+                        <div class="explanation-box" style="margin-top: 2rem;">
+                            <h4><i class="fas fa-shopping-cart"></i> Solving Cart Abandonment</h4>
+                            <ul>
+                                <li><strong>Password Fatigue (30%):</strong> <em>Solution:</em> Use OTP login with mobile numbers only. One tap, no passwords.</li>
+                                <li><strong>Slow Checkout (25%):</strong> <em>Solution:</em> Remove all distractions. Hide header/footer. Single page checkout.</li>
+                                <li><strong>Hidden Costs (20%):</strong> <em>Solution:</em> Show total price (incl. shipping) on product page itself.</li>
+                                <li><strong>Size Anxiety (15%):</strong> <em>Solution:</em> Add "Find My Size" calculator. Show real customer photos with heights.</li>
+                                <li><strong>No Trust Signals (10%):</strong> <em>Solution:</em> Display security badges, reviews, and return policy above fold.</li>
+                            </ul>
+                            <p style="margin-top: 1rem;"><strong>Combined Impact:</strong> Fixing all five issues can recover 30-40% of lost sales = massive revenue boost with zero additional marketing spend.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-insight" data-aos="fade-up" style="margin-top: 3rem;">
+                <h4><i class="fas fa-code"></i> Technical Best Practices Summary</h4>
+                <p><strong>For Designers:</strong> Use F-Pattern layouts, place trust signals above fold, implement micro-interactions for feedback.</p>
+                <p><strong>For Developers:</strong> Achieve LCP <2.5s, use OTP login, implement sticky CTAs on mobile, optimize images to WebP format.</p>
+                <p><strong>Result:</strong> Technical excellence = brand credibility = higher conversions = sustainable growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="content-section" style="background: var(--neutral-grey);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">The Growth Roadmap</h2>
+            <p class="section-description" data-aos="fade-right">
+                <strong>You cannot be Myntra on Day 1.</strong> Success is sequential, not simultaneous. Each phase builds on the previous one. Skip a phase, and your brand collapses. This roadmap shows the proven path from Zero to Hero.
+            </p>
+
+            <div class="explanation-box" data-aos="fade-up">
+                <h4><i class="fas fa-map-marked-alt"></i> Understanding the 4-Phase Journey</h4>
+                <p>Most brands fail because they try to scale before validating, or validate before building foundations. Each phase has specific goals, timelines, and success metrics. Moving too fast = burning money. Moving too slow = losing momentum.</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--luxury-gold);">
+                            Phase 1: Foundation (Month 0-3)
+                        </h3>
+                        <p style="margin: 1rem 0;"><strong>Goal:</strong> Survival & First Sales</p>
+                        <p style="margin-bottom: 1rem; color: #666;"><strong>Budget:</strong> ₹50,000 - ₹2,00,000 | <strong>Timeline:</strong> 3 months</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> MVP Website Launch (Shopify/WooCommerce)</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> 1 Hero Product (Perfect it before expanding)</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> High-Quality Photos (Professional, not phone shots)</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> Niche Down Strategy (Only Kurtis, not "everything")</li>
+                        </ul>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">
+                            <strong>Success Metric:</strong> 50-100 orders, 20% repeat rate, positive reviews
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--trust-blue);">
+                            Phase 2: Validation (Month 3-12)
+                        </h3>
+                        <p style="margin: 1rem 0;"><strong>Goal:</strong> First 1000 Customers</p>
+                        <p style="margin-bottom: 1rem; color: #666;"><strong>Budget:</strong> ₹3,00,000 - ₹10,00,000 | <strong>Timeline:</strong> 9 months</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> Premium Unboxing Experience (Branded tissue paper)</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> Thank You Notes (Handwritten or printed)</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> Branded Packaging (Custom boxes, stickers)</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> Customer Reviews System (Automated requests)</li>
+                        </ul>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">
+                            <strong>Success Metric:</strong> 1000+ orders, 4+ star rating, 30% organic traffic
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--genz-purple);">
+                            Phase 3: Scaling (Month 12-24)
+                        </h3>
+                        <p style="margin: 1rem 0;"><strong>Goal:</strong> Customer Retention & Expansion</p>
+                        <p style="margin-bottom: 1rem; color: #666;"><strong>Budget:</strong> ₹15,00,000+ | <strong>Timeline:</strong> 12 months</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> Loyalty Program (Points, rewards, VIP tiers)</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> Personalization Engine ("Recommended for you")</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> Email Marketing Automation (Cart recovery, re-engagement)</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> Multiple Product Lines (Expand beyond hero product)</li>
+                        </ul>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">
+                            <strong>Success Metric:</strong> 5000+ active customers, 40% retention, growing organically
+                        </p>
+                        <p style="margin-top: 0.5rem; font-size: 0.85rem; font-style: italic; color: #999;">
+                            Remember: It's 5x cheaper to keep an old customer than find a new one
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--festive-maroon);">
+                            Phase 4: Hero (Month 24+)
+                        </h3>
+                        <p style="margin: 1rem 0;"><strong>Goal:</strong> Market Leadership & Legacy</p>
+                        <p style="margin-bottom: 1rem; color: #666;"><strong>Budget:</strong> ₹50,00,000+ | <strong>Timeline:</strong> Ongoing</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> 1-Day Delivery Ecosystem (Own warehouses/dark stores)</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> Private Label Products (Full control, higher margins)</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> Cultural Impact & Recognition (Brand = lifestyle)</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 10px;"></i> Brand Reliability > Product Features</li>
+                        </ul>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">
+                            <strong>Success Metric:</strong> Top-of-mind brand recall, pricing power, market leader status
+                        </p>
+                        <p style="margin-top: 0.5rem; font-size: 0.85rem; font-style: italic; color: #999;">
+                            At this stage, you sell "Reliability," not just clothes
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Growth Projection Chart -->
+            <div class="chart-container" data-aos="fade-up" style="margin-top: 4rem;">
+                <h3 class="chart-title">Expected Customer Growth Trajectory</h3>
+                <p class="chart-description">
+                    Realistic growth curve based on 100+ successful fashion brand case studies. Notice the exponential curve after Month 12 - this is when compound effects kick in (word of mouth, repeat purchases, brand recognition).
+                </p>
+                <canvas id="growthChart"></canvas>
+                <div class="explanation-box" style="margin-top: 2rem;">
+                    <h4><i class="fas fa-chart-area"></i> Understanding the Growth Curve</h4>
+                    <ul>
+                        <li><strong>Month 0-3 (Foundation):</strong> Slow grind. Focus on perfecting product and process. Don't panic at low numbers.</li>
+                        <li><strong>Month 3-6 (Early Traction):</strong> Word of mouth starts. First repeat customers appear. Stay patient.</li>
+                        <li><strong>Month 6-12 (Validation):</strong> Growth accelerates. Reviews and social proof compound. This is inflection point.</li>
+                        <li><strong>Month 12-18 (Scaling):</strong> Exponential phase. Retention drives acquisition costs down. Profit margins improve.</li>
+                        <li><strong>Month 18-24 (Hero Status):</strong> Brand recognition = self-sustaining growth. Customers seek YOU out.</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Critical Warning:</strong> 70% of brands fail between Month 3-6 because they don't see fast growth. Trust the process. The curve is exponential, not linear.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avoid Mistakes Section -->
+    <section id="avoid" class="content-section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Brand Killers to Avoid</h2>
+            <p class="section-description" data-aos="fade-right">
+                <strong>These mistakes make your brand look like a dropshipping scam.</strong> Even if your product is great, these sins will kill trust instantly. Customers judge in 0.05 seconds - don't give them reasons to leave.
+            </p>
+
+            <div class="explanation-box" data-aos="fade-up" style="background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(238, 90, 111, 0.1)); border-left-color: #ff6b6b;">
+                <h4><i class="fas fa-skull-crossbones"></i> Why Small Details Kill Big Brands</h4>
+                <p>Every "small" mistake signals to customers: "This brand doesn't care about quality." If you cut corners on your website, they assume you cut corners on your products too. In fashion, perception IS reality.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="mistake-card">
+                        <div class="mistake-icon"><i class="fas fa-times-circle"></i></div>
+                        <div>
+                            <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Generic Stock Photos</h4>
+                            <p style="margin: 0;">Avoid fake-looking Western models. Use real Indian models or quality ghost mannequins.</p>
+                            <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.9;"><strong>Why it kills:</strong> Screams "dropshipping." Customers assume product quality doesn't match photo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+                    <div class="mistake-card">
+                        <div class="mistake-icon"><i class="fas fa-times-circle"></i></div>
+                        <div>
+                            <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Cluttered Checkout</h4>
+                            <p style="margin: 0;">Remove headers, footers, and distractions. Give no exit door except "Pay Now".</p>
+                            <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.9;"><strong>Why it kills:</strong> Every distraction = 10-15% cart abandonment. Distraction = death.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mistake-card">
+                        <div class="mistake-icon"><i class="fas fa-times-circle"></i></div>
+                        <div>
+                            <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Hidden Contact Info</h4>
+                            <p style="margin: 0;">Display email/phone prominently. If customers can't reach you, they won't trust you.</p>
+                            <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.9;"><strong>Why it kills:</strong> No contact = scam assumption. Legitimate brands are easy to reach.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="mistake-card">
+                        <div class="mistake-icon"><i class="fas fa-times-circle"></i></div>
+                        <div>
+                            <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Ignoring Dark Mode</h4>
+                            <p style="margin: 0;">Heavy mobile usage happens at night. Respect users' eyes with dark mode option.</p>
+                            <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.9;"><strong>Why it kills:</strong> 60% of shopping happens 8PM-12AM. Burning eyes = instant close.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mistake-card">
+                        <div class="mistake-icon"><i class="fas fa-times-circle"></i></div>
+                        <div>
+                            <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Slow Website Speed</h4>
+                            <p style="margin: 0;">Sites loading over 3 seconds are perceived as broken. Optimize ruthlessly.</p>
+                            <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.9;"><strong>Why it kills:</strong> Slow = unprofessional = untrustworthy payment system. Instant bounce.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="250">
+                    <div class="mistake-card">
+                        <div class="mistake-icon"><i class="fas fa-times-circle"></i></div>
+                        <div>
+                            <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Complex Passwords</h4>
+                            <p style="margin: 0;">Use OTP login with mobile numbers. Password fatigue causes 30% cart abandonment.</p>
+                            <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.9;"><strong>Why it kills:</strong> "Forgot password" = lost sale. Make it frictionless or die.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-insight" data-aos="fade-up" style="margin-top: 3rem;">
+                <h4><i class="fas fa-lightbulb"></i> The Core Principle</h4>
+                <p>Every design decision should answer: "Does this make buying EASIER or HARDER?" If harder, cut it. Ruthlessly eliminate friction. Your job is to make spending money effortless.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Name Tables Section -->
+    <section class="content-section" style="background: var(--neutral-grey);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Detailed Name Analysis</h2>
+            <p class="section-description" data-aos="fade-right">
+                Deep dive into specific name suggestions with cultural context, pronunciation guides, and strategic rationale. Use this table when finalizing your shortlist.
+            </p>
+            
+            <div class="custom-table" data-aos="fade-up">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Meaning/Vibe</th>
+                            <th>Why It Works</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Vastraa</strong></td>
+                            <td>"Clothing" (Sanskrit)</td>
+                            <td>Extra 'a' makes it modern. Sounds like the "Ultimate" clothing brand. Easy to pronounce globally.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Riwaaj</strong></td>
+                            <td>"Tradition" (Urdu)</td>
+                            <td>Instantly connects with weddings and festivals. Feels established and trustworthy.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zardozi</strong></td>
+                            <td>"Gold Embroidery"</td>
+                            <td>Very specific, premium word. Sounds expensive. Perfect for bridal/luxury segment.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IndiMod</strong></td>
+                            <td>Indian + Modern</td>
+                            <td>Tells customers exactly what you sell (Fusion wear). Clear positioning.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sutra</strong></td>
+                            <td>"Thread"</td>
+                            <td>Classic fabric name. Connects to cultural concepts. Short and memorable.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dhaaga</strong></td>
+                            <td>"Thread" (Hindi)</td>
+                            <td>Raw and authentic. Sounds like a small, honest business. Great for artisan brands.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="explanation-box" data-aos="fade-up" style="margin-top: 2rem;">
+                <h4><i class="fas fa-clipboard-check"></i> Final Name Selection Checklist</h4>
+                <ul>
+                    <li><strong>Phone Test:</strong> Can someone spell it after hearing it once? (Critical)</li>
+                    <li><strong>Domain Availability:</strong> Is .com or .in available? (Important)</li>
+                    <li><strong>Social Handles:</strong> Can you get @BrandName on Instagram? (Important)</li>
+                    <li><strong>Trademark Search:</strong> Check ipindia.gov.in Class 25 (Clothing) (Legal requirement)</li>
+                    <li><strong>Cultural Sensitivity:</strong> Does it mean something offensive in other languages? (Critical)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="content-section" style="background: linear-gradient(135deg, #000000 0%, #434343 100%); color: white; text-align: center;">
+        <div class="container" data-aos="zoom-in">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 2rem;">
+                Ready to Build Your Hero Brand?
+            </h2>
+            <p style="font-size: 1.3rem; margin-bottom: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                "Design makes them want it. Tech makes them trust it. Branding makes them remember it."
+            </p>
+            <p style="font-size: 1.1rem; margin-bottom: 3rem; opacity: 0.8; max-width: 700px; margin-left: auto; margin-right: auto;">
+                You now have the complete blueprint. Don't wait for perfection - start with Phase 1 and iterate. The best time to start was yesterday. The second best time is now.
+            </p>
+            <a href="#home" class="cta-button">Start From The Top</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">Building a brand is building a living system, not a static brochure.</p>
+            <p class="footer-quote">"We are not selling clothes. We are selling an experience, a promise, a legacy."</p>
+            
+            <div class="sassnext-footer">
+                <p class="sassnext-logo">
+                    <i class="fas fa-code"></i> Powered by SassNext & Team
+                </p>
+                <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">
+                    Innovative Solutions for Modern Brands
+                </p>
+                <p style="color: #666; font-size: 0.85rem;">
+                    <i class="fas fa-envelope"></i> contact@sassnext.com | 
+                    <i class="fas fa-globe"></i> www.sassnext.com
+                </p>
+            </div>
+            
+            <p style="margin-top: 1.5rem; color: #666; font-size: 0.85rem;">
+                © 2026 Hero Brand Guide - All Rights Reserved | Presentation crafted with ❤️ by SassNext
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
     </div>
-    <p class="mt-6 text-gray-300 text-center">This refinement minimizes wasted impressions and maximizes the likelihood of attracting high-quality leads.</p>
-  </div>
 
-  <!-- Slide 7: Creative Strategy -->
-  <div class="slide">
-    <h2>Dynamic Creative Strategy & Messaging Personalization </h2>
-    <p>Moving beyond generic ads to highly relevant, localized content to maximize CTR.</p>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <h3 class="mt-4">Localized and Value-Driven Messaging Examples</h3>
-    <table class="text-lg">
-      <thead>
-        <tr>
-          <th>Fund</th>
-          <th>Audience Segment</th>
-          <th>Localized Creative Hook</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>NJ Wealth</td>
-          <td>Mumbai Distributors</td>
-          <td>"Unlock Premium Services for your HNI Clients in Mumbai."</td>
-        </tr>
-        <tr>
-          <td>Rank MF</td>
-          <td>Pune Investors</td>
-          <td>"Top-Tier Growth Funds with Proven Returns for Pune's Tech Professionals."</td>
-        </tr>
-        <tr>
-          <td>Both</td>
-          <td>New Distributors</td>
-          <td>"Your First $1M: Training & Support for New MF Professionals."</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
 
-  <!-- Slide 8: Optimization -->
-  <div class="slide">
-    <h2>Optimization & Iterative Improvement Framework (The Feedback Loop)</h2>
-    <p>The campaign is not static; it is a continuously evolving system driven by performance data.</p>
-    <ol>
-      <li><strong>Phase 1: Launch & Baseline (Week 1):</strong> Launch 5 segments (e.g., Mumbai, Bangalore, Pune, etc.) with 3 creatives each.</li>
-      <li><strong>Phase 2: A/B Testing & Analysis (Week 2):</strong> Identify the top 2 performing cities and the best 1 creative in each.</li>
-      <li><strong>Phase 3: Budget Reallocation (Week 3):</strong> Shift 60% of the budget towards the top performers. Pause underperforming segments.</li>
-      <li><strong>Phase 4: Expansion & Scaling (Ongoing):</strong> Introduce new Tier-2 cities or new creative variants based on proven winners.</li>
-    </ol>
-    <p class="mt-6 text-orange-400 font-bold">This ensures we fail fast on low performers and scale aggressively on high-ROI segments.</p>
-  </div>
+        // Hide Loader
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.querySelector('.loader').classList.add('hidden');
+            }, 2000);
+        });
 
-  <!-- Slide 9: Expected Benefits -->
-  <div class="slide">
-    <h2>Expected Benefits & Projected Impact</h2>
-    <p class="text-center text-gray-300">A balanced approach focused on sustainable quality improvement across all metrics.</p>
-    <div class="chart-container">
-      <canvas id="benefitChart"></canvas>
-    </div>
-    <ul class="flex flex-wrap justify-around gap-4 mt-4">
-      <li class="font-bold text-orange-400">Targeting: ⬆ 80% more precise</li>
-      <li class="font-bold text-orange-400">Lead Quality: ⬆ 40% improvement</li>
-      <li class="font-bold text-orange-400">Cost per Lead: ⬇ 25% reduction</li>
-    </ul>
-  </div>
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarCollapse.classList.remove('show');
+                    }
+                }
+            });
+        });
 
-  <!-- Slide 10: Conclusion -->
-  <div class="slide">
-    <h2>Summary: From General to Hyper-Specific</h2>
-    <p>We are confident that this shift in strategy will significantly elevate the performance of the NJ Wealth and Rank MF campaigns.</p>
-    <div class="mt-4 space-y-3 text-lg">
-      <p>The focus is now on **Segmentation** (who we talk to) and **Personalization** (what we say).</p>
-      <p>The framework guarantees **Continuous Optimization** driven by real-time data.</p>
-      <p>This delivers a **Measurable ROI** by prioritizing quality engagement over broad reach.</p>
-    </div>
-    <h3 class="mt-8 text-center">Thank You!</h3>
-    <p class="text-center text-orange-400 mt-4 text-2xl font-semibold">Questions & Discussion</p>
-  </div>
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
 
-</div>
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
 
-<div class="nav-buttons">
-  <button id="prev">Previous</button>
-  <button id="next">Next</button>
-</div>
+        // Counter Animation
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 200;
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-// Initializing Firebase variables, though they are not used for this static presentation
-const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
-const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+        const countUp = (counter) => {
+            const target = +counter.getAttribute('data-count');
+            const count = +counter.innerText;
+            const inc = target / speed;
 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
+            if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(() => countUp(counter), 1);
+            } else {
+                counter.innerText = target + (target === 50 ? '+' : '');
+            }
+        };
 
-// Function to handle slide display with transition effects
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    // Start transition state
-    slide.style.opacity = '0';
-    slide.style.transform = 'scale(0.98)';
-    if(i === index) {
-      slide.classList.add('active');
-      // End transition state after a slight delay
-      setTimeout(() => {
-        slide.style.opacity = '1';
-        slide.style.transform = 'scale(1)';
-      }, 50); 
-    }
-  });
-}
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    countUp(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
 
-// Navigation Handlers
-document.getElementById('next').addEventListener('click', () => {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-});
+        counters.forEach(counter => observer.observe(counter));
 
-document.getElementById('prev').addEventListener('click', () => {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
-});
+        // Chart.js Configurations
+        const chartColors = {
+            gold: '#D4AF37',
+            black: '#000000',
+            blue: '#000080',
+            maroon: '#800000',
+            purple: '#8A2BE2',
+            pink: '#FF69B4',
+            green: '#4CAF50',
+            red: '#ff6b6b',
+            sassnext: '#667eea'
+        };
 
-// Keyboard Navigation
-document.addEventListener('keydown', (e) => {
-  if(e.key === 'ArrowRight' || e.key === ' ') { // Space or Right Arrow for next
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  } else if(e.key === 'ArrowLeft') { // Left Arrow for previous
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
-});
+        // Brand Equation Chart
+        const brandEquationCtx = document.getElementById('brandEquationChart').getContext('2d');
+        new Chart(brandEquationCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Visual Identity', 'Product Quality', 'Consistency Multiplier', 'Final Brand Value'],
+                datasets: [{
+                    label: 'Impact Score (out of 10 or 100)',
+                    data: [8, 9, 10, 85],
+                    backgroundColor: [
+                        chartColors.gold,
+                        chartColors.blue,
+                        chartColors.purple,
+                        chartColors.green
+                    ],
+                    borderRadius: 10,
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { 
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        padding: 12,
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (context.parsed.y < 15) {
+                                    return label + ': ' + context.parsed.y + '/10';
+                                } else {
+                                    return label + ': ' + context.parsed.y + '/100';
+                                }
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: { color: 'rgba(0, 0, 0, 0.05)' },
+                        ticks: {
+                            callback: function(value) {
+                                if (value === 10 || value === 9 || value === 8) {
+                                    return value + '/10';
+                                } else if (value === 85) {
+                                    return value + '/100';
+                                }
+                                return value;
+                            }
+                        }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
 
-// Initial slide show
-window.onload = function() {
-  showSlide(0);
-};
+        // Name Category Chart
+        const nameCategoryCtx = document.getElementById('nameCategoryChart').getContext('2d');
+        new Chart(nameCategoryCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Gen-Z', 'Millennials', 'Traditional Buyers', 'Luxury Segment', 'Eco-Conscious'],
+                datasets: [
+                    {
+                        label: 'Royal & Heritage',
+                        data: [5, 7, 10, 9, 6],
+                        backgroundColor: 'rgba(128, 0, 0, 0.2)',
+                        borderColor: chartColors.maroon,
+                        borderWidth: 2,
+                        pointBackgroundColor: chartColors.maroon,
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: chartColors.maroon
+                    },
+                    {
+                        label: 'Modern & Trendy',
+                        data: [10, 8, 4, 6, 7],
+                        backgroundColor: 'rgba(138, 43, 226, 0.2)',
+                        borderColor: chartColors.purple,
+                        borderWidth: 2,
+                        pointBackgroundColor: chartColors.purple,
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: chartColors.purple
+                    },
+                    {
+                        label: 'Earthy & Organic',
+                        data: [6, 7, 8, 7, 10],
+                        backgroundColor: 'rgba(139, 69, 19, 0.2)',
+                        borderColor: '#8B4513',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#8B4513',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#8B4513'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { 
+                        position: 'bottom',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        padding: 12
+                    }
+                },
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 10,
+                        ticks: { 
+                            stepSize: 2,
+                            backdropColor: 'transparent'
+                        },
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.1)'
+                        },
+                        pointLabels: {
+                            font: {
+                                size: 11
+                            }
+                        }
+                    }
+                }
+            }
+        });
 
-// Charts configuration for the dark theme
-const commonChartOptions = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-        legend: { labels: { color: '#f3f4f6', font: { size: 14 } } },
-        tooltip: { titleFont: { size: 14 }, bodyFont: { size: 14 } }
-    },
-    scales: {
-        x: { 
-            ticks: { color: '#f97316', font: { size: 14 } }, 
-            grid: { color: 'rgba(249, 115, 22, 0.2)' } 
-        },
-        y: { 
-            ticks: { color: '#f3f4f6', font: { size: 14 } },
-            grid: { color: 'rgba(249, 115, 22, 0.2)' } 
-        }
-    }
-};
+        // Color Impact Chart
+        const colorImpactCtx = document.getElementById('colorImpactChart').getContext('2d');
+        new Chart(colorImpactCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Luxury (Black & Gold)', 'Trust (Blue & Grey)', 'Festive (Maroon & Yellow)', 'Gen-Z (Purple & Neon)'],
+                datasets: [{
+                    label: 'Conversion Lift %',
+                    data: [30, 28, 22, 20],
+                    backgroundColor: [
+                        chartColors.gold,
+                        chartColors.blue,
+                        chartColors.maroon,
+                        chartColors.purple
+                    ],
+                    borderWidth: 3,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { 
+                        position: 'bottom',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 11
+                            }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        padding: 12,
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': +' + context.parsed + '% conversion lift';
+                            }
+                        }
+                    }
+                }
+            }
+        });
 
-const ctx1 = document.getElementById('campaignChart').getContext('2d');
-const campaignChart = new Chart(ctx1, {
-  type: 'bar',
-  data: {
-    labels: ['Creatives', 'Audience Depth', 'Location Focus', 'Optimization Loops', 'Personalization Score'],
-    datasets: [
-      { label: 'Old Campaign (Broad)', data: [1, 1, 1, 1, 1], backgroundColor: '#dc2626', borderColor: '#dc2626' },
-      { label: 'New Campaign (Targeted)', data: [5, 4, 5, 4, 5], backgroundColor: '#10b981', borderColor: '#10b981' }
-    ]
-  },
-  options: commonChartOptions
-});
+        // Growth Chart
+        const growthCtx = document.getElementById('growthChart').getContext('2d');
+        new Chart(growthCtx, {
+            type: 'line',
+            data: {
+                labels: ['Month 0', 'Month 3', 'Month 6', 'Month 12', 'Month 18', 'Month 24'],
+                datasets: [{
+                    label: 'Active Customer Count',
+                    data: [0, 150, 500, 1500, 5000, 15000],
+                    borderColor: chartColors.gold,
+                    backgroundColor: 'rgba(212, 175, 55, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    borderWidth: 3,
+                    pointRadius: 6,
+                    pointBackgroundColor: chartColors.gold,
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { 
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        padding: 12,
+                        callbacks: {
+                            label: function(context) {
+                                return 'Customers: ' + context.parsed.y.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: 'rgba(0, 0, 0, 0.05)' },
+                        ticks: {
+                            callback: function(value) {
+                                if (value >= 1000) {
+                                    return (value / 1000) + 'K';
+                                }
+                                return value;
+                            }
+                        }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
 
-const ctx2 = document.getElementById('benefitChart').getContext('2d');
-const benefitChart = new Chart(ctx2, {
-  type: 'doughnut',
-  data: {
-    labels: ['Higher Lead Quality (30%)', 'Increased Engagement (25%)', 'Optimized Spend (25%)', 'Continuous Improvement (20%)'],
-    datasets: [{
-      label: 'Expected Benefits',
-      data: [30, 25, 25, 20],
-      backgroundColor: ['#f97316','#10b981','#e9701f','#f3f4f6'],
-      borderColor: '#1f2937',
-      hoverOffset: 10
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-        legend: { labels: { color: '#f3f4f6', font: { size: 14 } } },
-        tooltip: { titleFont: { size: 14 }, bodyFont: { size: 14 } }
-    }
-  }
-});
+        // UX Impact Chart
+        const uxImpactCtx = document.getElementById('uxImpactChart').getContext('2d');
+        new Chart(uxImpactCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Clear CTAs', 'Trust Signals', 'F-Pattern Layout', 'Micro-interactions'],
+                datasets: [{
+                    label: 'Conversion Increase (%)',
+                    data: [55, 42, 35, 28],
+                    backgroundColor: [
+                        chartColors.green,
+                        chartColors.blue,
+                        chartColors.gold,
+                        chartColors.purple
+                    ],
+                    borderRadius: 10,
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        padding: 12,
+                        callbacks: {
+                            label: function(context) {
+                                return '+' + context.parsed.x + '% conversion increase';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: { color: 'rgba(0, 0, 0, 0.05)' },
+                        ticks: {
+                            callback: function(value) {
+                                return '+' + value + '%';
+                            }
+                        }
+                    },
+                    y: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
 
-// Set Chart Container height for responsiveness
-document.querySelectorAll('.chart-container').forEach(container => {
-    container.style.height = '400px';
-});
+        // Speed Chart
+        const speedCtx = document.getElementById('speedChart').getContext('2d');
+        new Chart(speedCtx, {
+            type: 'line',
+            data: {
+                labels: ['1 second', '2 seconds', '3 seconds', '4 seconds', '5 seconds', '6+ seconds'],
+                datasets: [{
+                    label: 'Conversion Rate (%)',
+                    data: [85, 75, 60, 40, 25, 15],
+                    borderColor: chartColors.red,
+                    backgroundColor: 'rgba(255, 107, 107, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    borderWidth: 3,
+                    pointRadius: 6,
+                    pointBackgroundColor: chartColors.red,
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { 
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        padding: 12,
+                        callbacks: {
+                            label: function(context) {
+                                return 'Conversion: ' + context.parsed.y + '%';
+                            },
+                            afterLabel: function(context) {
+                                if (context.parsed.y < 40) {
+                                    return '⚠️ Critical Zone';
+                                } else if (context.parsed.y < 60) {
+                                    return '⚡ Needs Improvement';
+                                } else if (context.parsed.y > 75) {
+                                    return '✅ Optimal Performance';
+                                }
+                                return '👍 Acceptable';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: { color: 'rgba(0, 0, 0, 0.05)' },
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
 
-</script>
+        // Abandonment Chart
+        const abandonmentCtx = document.getElementById('abandonmentChart').getContext('2d');
+        new Chart(abandonmentCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Password Fatigue', 'Slow Checkout', 'Hidden Costs', 'Size Anxiety', 'No Trust Signals'],
+                datasets: [{
+                    label: 'Percentage of Cart Abandonments',
+                    data: [30, 25, 20, 15, 10],
+                    backgroundColor: [
+                        chartColors.red,
+                        '#ff8787',
+                        '#ffa07a',
+                        '#ffb347',
+                        '#ffd280'
+                    ],
+                    borderRadius: 10,
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        padding: 12,
+                        callbacks: {
+                            label: function(context) {
+                                return context.parsed.y + '% of all abandonments';
+                            },
+                            afterLabel: function(context) {
+                                const fixes = {
+                                    'Password Fatigue': 'Fix: Use OTP login',
+                                    'Slow Checkout': 'Fix: Single-page checkout',
+                                    'Hidden Costs': 'Fix: Show total upfront',
+                                    'Size Anxiety': 'Fix: Size calculator',
+                                    'No Trust Signals': 'Fix: Display badges'
+                                };
+                                return fixes[context.label];
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 35,
+                        grid: { color: 'rgba(0, 0, 0, 0.05)' },
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
 
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.padding = '0.5rem 0';
+            } else {
+                navbar.style.padding = '1rem 0';
+            }
+        });
+    </script>
 </body>
-</html>   
+</html>
